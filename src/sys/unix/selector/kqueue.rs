@@ -24,6 +24,7 @@ type Filter = libc::c_short;
     target_os = "ios",
     target_os = "macos",
     target_os = "tvos",
+    target_os = "visionos",
     target_os = "watchos"
 ))]
 type Filter = i16;
@@ -37,6 +38,7 @@ type Flags = libc::c_ushort;
     target_os = "ios",
     target_os = "macos",
     target_os = "tvos",
+    target_os = "visionos",
     target_os = "watchos"
 ))]
 type Flags = u16;
@@ -213,6 +215,7 @@ impl Selector {
         target_os = "ios",
         target_os = "macos",
         target_os = "tvos",
+        target_os = "visionos",
         target_os = "watchos"
     ))]
     pub fn setup_waker(&self, token: Token) -> io::Result<()> {
@@ -239,6 +242,7 @@ impl Selector {
         target_os = "ios",
         target_os = "macos",
         target_os = "tvos",
+        target_os = "visionos",
         target_os = "watchos"
     ))]
     pub fn wake(&self, token: Token) -> io::Result<()> {
@@ -376,6 +380,7 @@ pub mod event {
                 target_os = "ios",
                 target_os = "macos",
                 target_os = "tvos",
+                target_os = "visionos",
                 target_os = "watchos"
             ))]
             // Used by the `Awakener`. On platforms that use `eventfd` or a unix
@@ -389,6 +394,7 @@ pub mod event {
                 target_os = "ios",
                 target_os = "macos",
                 target_os = "tvos",
+                target_os = "visionos",
                 target_os = "watchos"
             )))]
             {
@@ -429,6 +435,7 @@ pub mod event {
             target_os = "ios",
             target_os = "macos",
             target_os = "tvos",
+            target_os = "visionos",
             target_os = "watchos",
         ))]
         {
@@ -440,6 +447,7 @@ pub mod event {
             target_os = "ios",
             target_os = "macos",
             target_os = "tvos",
+            target_os = "visionos",
             target_os = "watchos",
         )))]
         {

@@ -32,6 +32,7 @@ pub(crate) fn new_socket(domain: libc::c_int, socket_type: libc::c_int) -> io::R
         target_os = "ios",
         target_os = "macos",
         target_os = "tvos",
+        target_os = "visionos",
         target_os = "watchos",
     ))]
     if let Err(err) = syscall!(setsockopt(
@@ -50,6 +51,7 @@ pub(crate) fn new_socket(domain: libc::c_int, socket_type: libc::c_int) -> io::R
         target_os = "ios",
         target_os = "macos",
         target_os = "tvos",
+        target_os = "visionos",
         target_os = "watchos",
         target_os = "espidf",
         target_os = "vita",
@@ -112,6 +114,7 @@ pub(crate) fn socket_addr(addr: &SocketAddr) -> (SocketAddrCRepr, libc::socklen_
                     target_os = "netbsd",
                     target_os = "openbsd",
                     target_os = "tvos",
+                    target_os = "visionos",
                     target_os = "watchos",
                     target_os = "espidf",
                     target_os = "vita",
@@ -143,6 +146,7 @@ pub(crate) fn socket_addr(addr: &SocketAddr) -> (SocketAddrCRepr, libc::socklen_
                     target_os = "netbsd",
                     target_os = "openbsd",
                     target_os = "tvos",
+                    target_os = "visionos",
                     target_os = "watchos",
                     target_os = "espidf",
                     target_os = "vita",
